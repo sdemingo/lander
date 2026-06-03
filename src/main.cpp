@@ -21,12 +21,12 @@ int main(void) {
   bool endgame = false;
   std::string endTitle = "";
   
-  Lander lander;
+  
 
   sf::View camara(sf::FloatRect(0.f, 0.f, WIDTH, HEIGHT));
   float velocidad_camara = 300.f; // Píxeles por segundo
 
-
+  Lander lander(ventana,camara);
   Terrain mundo(ventana,camara);
   mundo.generate();
 
@@ -89,7 +89,9 @@ int main(void) {
         ventana.setView(camara);
 
         mundo.draw();
-        ventana.draw(lander.get_shape(camara.getCenter().x));
+        lander.draw();
+
+        //ventana.draw(lander.get_shape(camara.getCenter().x));
       }
       ventana.display();
   }

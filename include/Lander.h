@@ -10,18 +10,22 @@ public:
 private:
   int position;
   int angle;
-  sf::RectangleShape shape;
+  sf::RenderWindow *ventana;
+  sf::View *camara;
+
+  sf::Texture textura;
+  sf::Sprite sprite;
 
 public:
-  Lander();
+  Lander(sf::RenderWindow &v, sf::View &c);
   void climb();
   void drop();
   void estabilize();
   void left();
   void right();
   bool land(int floor);
-  sf::RectangleShape get_shape(int x_position);
-  
+  void draw();
+
 };
 
 
