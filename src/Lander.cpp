@@ -33,15 +33,15 @@ void Lander::drop(){
 }
 
 void Lander::estabilize(){
-  //shape.setRotation(0.0f);
+  sprite.setRotation(0.0f);
 }
 
 void Lander::right(){
-  //shape.setRotation(25.0f);
+  sprite.setRotation(25.0f);
 }
 
 void Lander::left(){
-  //shape.setRotation(-25.0f);
+  sprite.setRotation(-25.0f);
 }
 
 bool Lander::land(int floor){
@@ -52,8 +52,3 @@ void Lander::draw(){
   sprite.setPosition(camara->getCenter().x, position);
   ventana->draw(sprite);
 }
-
-/*sf::RectangleShape Lander::get_shape(int x_position){
-  shape.setPosition(x_position, position);
-  return shape;
-}*/
