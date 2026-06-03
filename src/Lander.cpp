@@ -31,7 +31,7 @@ void Lander::left(){
   shape.setRotation(-25.0f);
 }
 
-bool Lander::crash(int floor){
+bool Lander::land(int floor){
   return position >= floor - size;
 }
 
