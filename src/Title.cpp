@@ -1,22 +1,21 @@
 #include <SFML/Graphics.hpp>
 #include "Title.h"
-#include "Assets.h"
 
 
 Title::Title(std::string fontname){
 
-  std::string fontpath = loader.get_path("fonts/playfulltime.ttf");
-  if (!Title::font.loadFromFile(fontpath))
+  std::string fontpath = "assets/fonts/";
+  if (!Title::font.loadFromFile(fontpath + fontname))
     {
       //std::cout << "No encuentro la fuente" << std::endl;
     }
 }
 
 
-sf::Text Title::make_title(std::string strtext){
+sf::Text Title::make_title(std::string strtext, int x_position){
 
   sf::Text text(strtext, Title::font, 80);
-  text.setPosition(100,100);
+  text.setPosition(x_position - 100, 100);
   text.setFillColor(sf::Color::White);
   
   return text;

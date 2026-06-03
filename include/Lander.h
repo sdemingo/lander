@@ -19,7 +19,7 @@ public:
   void left();
   void right();
   bool crash(int floor);
-  sf::RectangleShape get_shape();
+  sf::RectangleShape get_shape(int x_position);
   
 };
 

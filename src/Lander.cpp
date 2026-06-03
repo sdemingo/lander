@@ -35,7 +35,7 @@ bool Lander::crash(int floor){
   return position >= floor - size;
 }
 
-sf::RectangleShape Lander::get_shape(){
-  shape.setPosition(375, position);
+sf::RectangleShape Lander::get_shape(int x_position){
+  shape.setPosition(x_position, position);
   return shape;
 }
