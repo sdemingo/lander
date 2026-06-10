@@ -7,8 +7,6 @@ Lander::Lander(sf::RenderWindow &v, sf::View &c) : ventana(&v), camara(&c) {
   position=0;
   angle=0;
 
-
-
   if (!textura.loadFromFile("assets/sprites/lem.png")) {
     std::cout << "Error: No se pudo encontrar assets/sprites/lem.png" << std::endl;
   }else{
@@ -17,11 +15,6 @@ Lander::Lander(sf::RenderWindow &v, sf::View &c) : ventana(&v), camara(&c) {
     sprite.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
     sprite.setPosition(camara->getCenter().x, position);
   }
-
-/*  shape.setFillColor(sf::Color::Blue);
-  shape.setSize(sf::Vector2f(size,size));
-  shape.setOrigin({float(size/2),float(size/2)});
-*/
 }
 
 void Lander::climb(){

@@ -22,6 +22,9 @@ private:
   sf::RenderWindow *ventana;
   sf::View *camara;
 
+  sf::Texture rock_texture;
+  sf::Sprite rock_sprite;
+
 public:
   Terrain(sf::RenderWindow &v, sf::View &c);
   void generate();
